@@ -1,0 +1,18 @@
+{
+  "name": "vskud",
+  "subdomain": "vskud",
+  "domains": [
+    "vskud.com",
+    "www.vskud.com"
+  ],
+  "scripts": {
+    "start": "server/index.js"
+  },
+  "version": "0.0.1-2",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "dependencies": {
+    "express": "3.x"
+  }
+}

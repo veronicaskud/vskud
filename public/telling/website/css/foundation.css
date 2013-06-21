@@ -2623,8 +2623,8 @@ form.custom {
 
 .top-bar {
   overflow: hidden;
-  height: 95px;
-  line-height: 95px;
+  height: 85px;
+  line-height: 85px;
   position: relative;
   background: #fff;
   margin-bottom: 0; 
@@ -2649,13 +2649,12 @@ form.custom {
     position: relative;
     margin: 0; }
   .top-bar .name {
-    height: 90px;
+    
     margin: 0;
     font-size: 16px; 
-	padding-left:20px;
 	}
     .top-bar .name h1 {
-      line-height: 90px;
+      line-height: 80px;
       font-size: 1.5625em;
       margin: 0; }
       .top-bar .name h1 a {
@@ -2676,10 +2675,10 @@ form.custom {
       position: relative;
       display: block;
       padding: 0 15px;
-      height: 90px;
-      line-height: 90px; }
+      height: 80px;
+      line-height: 80px; }
     .top-bar .toggle-topbar.menu-icon {
-      right: 50px;
+      right: 40px;
       top: 50%;
       margin-top: -16px;
       padding-left: 40px; }
@@ -2699,7 +2698,6 @@ form.custom {
           -webkit-box-shadow: 0 10px 0 1px #666 0 16px 0 1px #666, 0 22px 0 1px #666;
           box-shadow: 0 10px 0 1px #666, 0 16px 0 1px #666, 0 22px 0 1px #666; 
 		  color: #666;
-		  text-shadow: 1px 1px 1px #eee;
 		  }
   .top-bar.expanded {
     height: auto;
@@ -2819,13 +2817,13 @@ form.custom {
       font-size: 0.625em; }
 
 .top-bar-js-breakpoint {
-  width: 54.25em !important;
+  width: 51.25em !important;
   visibility: hidden; }
 
 .js-generated {
   display: block; }
 
-@media only screen and (min-width: 54.25em) {
+@media only screen and (min-width: 51.25em) {
   .top-bar {
     background: #fff;
     *zoom: 1;
@@ -2866,7 +2864,7 @@ form.custom {
       width: auto;
       height: auto !important;
       display: inline; 
-	  margin-right:30px;
+	  margin-right:20px;
 	  }
 	  
       .top-bar-section ul li {
@@ -2877,12 +2875,12 @@ form.custom {
           display: none; }
 		  
     .top-bar-section li a:not(.button) {
-      margin-top:25px;
+      margin-top:20px;
 	  padding: 8px 14px 8px 14px;
       background: #fff; 
 	  font-weight:bold;
 	  color: #666;
-	  text-shadow: 1px 1px 1px #eee;
+	  text-shadow: 0px 0px 0px #eee;
 	  }
 	  
 	  
@@ -2935,13 +2933,13 @@ form.custom {
       border-right: solid 1px #2b2b2b;
       border-left: solid 1px black;
       clear: none;
-      height: 90px;
+      height: 80px;
       width: 0px; }
     .top-bar-section .has-form {
       background: #fff;
       padding: 0 15px;
-      height: 90px;
-	  line-height:150px;
+      height: 80px;
+	  line-height:80px;
 	   }
     .top-bar-section ul.right li .dropdown {
       left: auto;
@@ -4069,7 +4067,7 @@ kbd {
   background: white;
   z-index: 50;
   min-width: 100%;
-  padding: 10px; }
+   }
   [data-magellan-expedition] .sub-nav {
     margin-bottom: 0; }
     [data-magellan-expedition] .sub-nav dd {

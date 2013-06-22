@@ -2657,12 +2657,13 @@ form.custom {
       line-height: 80px;
       font-size: 1.5625em;
       margin: 0; }
+	  
       .top-bar .name h1 a {
         font-weight: bold;
         color: #111111;
-        width: 50%;
         display: block;
         padding: 0 15px; }
+		
   .top-bar .toggle-topbar {
     position: absolute;
     right: 0;
@@ -2678,7 +2679,7 @@ form.custom {
       height: 80px;
       line-height: 80px; }
     .top-bar .toggle-topbar.menu-icon {
-      right: 40px;
+      right: 30px;
       top: 50%;
       margin-top: -16px;
       padding-left: 40px; }
@@ -2693,7 +2694,7 @@ form.custom {
           position: absolute;
           right: 0;
           display: block;
-          width: 16px;
+          width: 20px;
           height: 0;
           -webkit-box-shadow: 0 10px 0 1px #666 0 16px 0 1px #666, 0 22px 0 1px #666;
           box-shadow: 0 10px 0 1px #666, 0 16px 0 1px #666, 0 22px 0 1px #666; 

@@ -50,9 +50,9 @@ font-weight:600;
 
 
 .heroimage {
-	padding: 215px 0px 0px 0px;
 	margin: 80px 0 0 0;
-	min-height:440px;
+	padding: 0;
+
 	border-bottom: 5px solid #ccc !important;
 	background-color: #0f0c0b;
 	background-repeat: no-repeat;
@@ -61,30 +61,32 @@ font-weight:600;
 }
 
 .hero .home {
-	background-image: url(../img/story.png);
+	background-image: url(../img/hero/story.jpg);
 }
 
 .hero .about {
-	background-image: url(../img/aboutuspic.png);
+	background-image: url(../img/hero/about.jpg);
 }
 
 .hero .how {
-	background-image: url(../img/howpic2.png);
+	background-image: url(../img/hero/how.jpg);
 }
 
 .hero .testimonials {
-	background-image: url(../img/testimonialspic.png);
+	background-image: url(../img/hero/testimonials.jpg);
 }
 
 .hero .getstarted {
-	background-image: url(../img/Camera.png);
+	background-image: url(../img/hero/camera.jpg);
 }
 
+
 .hero-content {
-background: rgba(0,0,0,0.8);
+background-color: #000;
+background-color: rgba(0,0,0,0.8);
 padding: 20px 25px 20px 50px;
 max-width:60%;
-margin-bottom: 10px;
+margin: 215px 0 10px 0;
 }
 
 .hero p {
@@ -301,17 +303,19 @@ margin-top:0;
 	padding: 25px 17px 2px 20px;
 	margin: 18px 0 0 0;
 	border-bottom: 3px solid #ac3236;
-	font-weight:600;
 	color:#424242;
 	font-size:24px;
 }
 
+.democontact p {line-height: 1em; text-align:left;}
+.democontact small {font-size: 16px}
+
 .democontact a {
-	color:#424242;
+	color:#ac3236;
 }
 
 .democontact a:hover {
-	color:#ac3236;
+	color:#424242;
 }
 
 .white {

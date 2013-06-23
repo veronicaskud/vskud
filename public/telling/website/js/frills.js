@@ -1,12 +1,24 @@
-$(document).ready(function() {
 
+
+
+$(document).ready(function() {
+// cheap workaround for the top navbar jumping on initial scroll... not sure where that's coming from, too lazy to find it:
+	$(window).scrollTop(1);$(window).scrollTop(0);
+
+
+if (! (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+		parallax()
+}
+
+}); 
+
+
+function parallax() {
 	$('.heroimage, .footer').css("position","fixed");
 
 //	var footertop = $(document).height();
 	$('body').css("marginBottom",$('.footer').height());
 
-// cheap workaround for the top navbar jumping on initial scroll... not sure where that's coming from, too lazy to find it:
-	$(window).scrollTop(1);$(window).scrollTop(0);
 	
 // even cheaper workaround to reset footer position on window resize:
 $(window).resize(function() {$(window).scrollTop($(window).scrollTop()-1)});
@@ -25,5 +37,5 @@ $(window).scroll(function() {
 	});
 
 
-}); 
 
+}

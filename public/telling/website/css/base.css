@@ -1,0 +1,133 @@
+body {
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+a {text-decoration: none; color: #AC3236}
+
+.highlight-text {
+	font-weight:600;
+	color:#b82b2f;
+	text-transform:uppercase;
+	
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.top-bar {
+	font-weight: 600;
+	border-bottom: 5px solid #CCC;
+	font-size: 0.8em;
+	background-color: #FFF;
+	padding-bottom: 5px;
+}
+.top-bar a {
+	color: #666;
+}
+.top-bar a:hover, .topbar a.selected {
+	color: #AC3236;
+}
+
+.top-bar h1 {
+	width: 250px;
+	height: 50px; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: 0; padding: 0;
+	background: url('../img/logo.png') 5px 100% no-repeat;
+}
+
+.top-nav {
+	text-align:right
+}
+
+.top-bar ul {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+.top-bar li {display:inline-block; white-space: nowrap;}
+.top-bar li a {padding: 5px; margin-right: 10px;}
+.menu-icon {float:right; padding: 5px; margin-right: 10px; font-size: 2em}
+
+
+.top-bar .buttonx, .top-bar .buttonx:hover {
+	background: #ac3236;
+	color:#fff;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.hero {
+	margin: 0;
+	padding: 0;
+	border-bottom: 5px solid #CCC;
+	background-color: #0f0c0b;
+	position:relative;
+}
+
+.heroimage {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	height: 480px;
+}
+
+.hero .how {
+	background-image: url(../img/hero/camera.jpg);
+}
+
+
+.hero-content {
+	background-color: #000;
+	background-color: rgba(0,0,0,0.8);
+	padding: 20px 25px 20px 50px;
+	max-width:60%;
+	color: #c2c2c2;
+	font-size: 1.3em;
+	font-weight: 400;
+	margin-bottom: 3px;
+	position: absolute;
+	bottom: 2em;
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+	@media only screen and (max-width: 640px) {
+		.menu-icon {display:block}
+		.top-nav {text-align:left; display:none;}
+		.top-nav.expanded {display:block}
+	
+		.top-nav li {display:block;}
+		.top-nav li a{display:block; width: 100%; line-height: 1.8em;}
+		
+		.hero-content {
+			font-size: 1em
+		}
+		
+	}
+	
+	@media only screen and (min-width: 641px) {
+		.menu-icon {display:none}
+		.top-nav {margin: 5px}
+	}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* BEGIN position:fixed top menu */
+	@media only screen and (min-width: 321px) {
+		.top-bar {
+			position:fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 99;
+	}
+/* END position:fixed top menu */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

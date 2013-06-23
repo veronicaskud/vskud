@@ -1,0 +1,32 @@
+
+/*  HighPPI css needs to stay in a separate file for which respond.min.js will not be called.   respond.min.js doesn't work for device-pixel queries. */
+
+/* ################################################################################################################## */
+
+/* High PPI small-screen Devices ----------- */
+@media (min--moz-device-pixel-ratio: 1.5) and (max-width: 480px), /* not a typo, the prefix really is that stupid */
+       (-o-min-device-pixel-ratio: 3/2) and (max-width: 480px),
+       (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 480px),
+       (min-device-pixel-ratio: 1.5) and (max-width: 480px),
+       (min-resolution: 144dpi) and (max-width: 480px),
+       (min-resolution: 1.5dppx) and (max-width: 480px) {
+
+
+}
+
+/* ################################################################################################################## */
+/* High PPI large screen Devices ----------- */
+
+
+@media (min--moz-device-pixel-ratio: 1.5) and (min-width: 481px), /* not a typo, the prefix really is that stupid */
+       (-o-min-device-pixel-ratio: 3/2) and (min-width: 481px),
+       (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 481px),
+       (min-device-pixel-ratio: 1.5) and (min-width: 481px),
+       (min-resolution: 144dpi) and (min-width: 481px),
+       (min-resolution: 1.5dppx) and (min-width: 481px) {
+
+
+
+
+}
+

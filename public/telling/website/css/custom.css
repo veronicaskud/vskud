@@ -3,6 +3,7 @@
 
 .logocontainer {max-width:255px;}
 
+
 .top-bar {border-bottom: 5px solid #ccc !important;
 font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;	
 }
@@ -45,64 +46,39 @@ font-weight:600;
 	 color: #ac3236;
 }
 
-.home {
-padding: 215px 0px 0px 0px;
-margin:0 0 1.4em 0;
-background: #0f0c0b url(../img/story.png) no-repeat center top;
-background-position: center center;
-background-size: cover;
-min-height:440px;
-border-bottom: 5px solid #ccc !important;
+.hero {margin-top: 80px} /* clear top nav */
+
+
+.heroimage {
+	padding: 215px 0px 0px 0px;
+	margin:0;
+	min-height:440px;
+	border-bottom: 5px solid #ccc !important;
+	background-color: #0f0c0b;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+
+}
+
+.hero .home {
+	background-image: url(../img/story.png);
 }
 
 .hero .about {
-padding: 215px 0px 0px 0px;
-margin:0;
-background: #0f0c0b url(../img/aboutuspic.png) no-repeat center top;
-background-position: center center;
-background-size: cover;
-min-height:440px;
-border-bottom: 5px solid #ccc !important;
+	background-image: url(../img/aboutuspic.png);
 }
 
 .hero .how {
-padding: 215px 0px 0px 0px;
-margin:0;
-background: #0f0c0b url(../img/howpic2.png) no-repeat center top;
-background-position: center center;
-background-size: cover;
-min-height:440px;
-border-bottom: 5px solid #ccc !important;
+	background-image: url(../img/howpic2.png);
 }
 
 .hero .testimonials {
-padding: 215px 0px 0px 0px;
-margin:0;
-background: #0f0c0b url(../img/testimonialspic.png) no-repeat center top;
-background-position: center center;
-background-size: cover;
-min-height:440px;
-border-bottom: 5px solid #ccc !important;
+	background-image: url(../img/testimonialspic.png);
 }
 
 .hero .getstarted {
-padding: 215px 0px 0px 0px;
-margin:0;
-background: #ac3236 url(../img/Camera.png) no-repeat center top;
-background-position: center center;
-background-size: cover;
-min-height:440px;
-border-bottom: 5px solid #ccc !important;
-}
-
-.hero .getstartedleft {
-padding: 215px 0px 0px 0px;
-margin:0;
-background: #aa2428;
-background-position: center center;
-background-size: cover;
-min-height:440px;
-border-bottom: 5px solid #ccc !important;
+	background-image: url(../img/Camera.png);
 }
 
 .hero-content {
@@ -154,7 +130,7 @@ font-weight: 400;
 font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;	
 margin-top:0;
 text-transform:uppercase;
-letter-spacing: -.09em;
+letter-spacing: -.03em;
 }
 
 .picmenu a img {
@@ -213,11 +189,15 @@ margin-top:0;
 }
 
 .abouttip {
-	border-bottom: dotted 1px #cccccc;
+	border: 1px solid #999;
 	font-weight: bold;
 	color: #333333;
 	opacity:.9;
 	display:block;
+	box-shadow:         1px -1px 2px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 1px -1px 2px rgba(0,0,0,0.4);
+	-moz-box-shadow:    1px -1px 2px rgba(0,0,0,0.4);
+
 	
 }
 
@@ -297,7 +277,9 @@ margin-top:0;
 }
 
 .testimonial.white {
-box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow:         1px -1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:    1px -1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .homefeature {
@@ -308,7 +290,7 @@ box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.1);
 	border-bottom: 3px solid #ac3236;
 	font-style: italic;
 	font-weight:400;
-	-moz-border-radius:    5px;
+	-moz-border-radius:     5px;
    -webkit-border-radius: 5px;
    border-radius:         5px;
    text-align:center;
@@ -409,7 +391,9 @@ box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.1);
 }
  
 .flex-video {
-	box-shadow: 1px -1px 2px rgba(0,0,0,0.4);
+	box-shadow:         1px -1px 2px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 1px -1px 2px rgba(0,0,0,0.4);
+	-moz-box-shadow:    1px -1px 2px rgba(0,0,0,0.4);
 	border: 1px solid #666;
 	background-color: #CCC;
 	padding: 0;

@@ -39,6 +39,7 @@ dwsync.xml
 intermediate
 publish
 .idea
+*.bbprojectd
 
 # build script local files
 build/buildinfo.properties

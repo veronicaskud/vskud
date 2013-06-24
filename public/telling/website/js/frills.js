@@ -47,28 +47,60 @@ var scrollHandler = function() {
 
 
 function parallax() {
-	$('.herocontainer, .footer').css("position","fixed");
+	$('.herocontainer, .footer, .parallax').css("position","fixed");
 
-//	var footertop = $(document).height();
+	var footertop = $(document).height();
 	$('body').css("marginBottom",$('.footer').height());
-	$(window).scrollTop(1);
 	
-// even cheaper workaround to reset footer position on window resize:
-$(window).resize(function() {$(window).scrollTop($(window).scrollTop()-1)});
+// Reset parallax positions:
+	$(window).scrollTop(1);	$(window).scrollTop(0);
+	
+	// Need to trigger this only on a delay:
+	$(window).resize(resetParallax);
+	
+	
 
 
-$(window).scroll(function() {
+	// GENERIC PARALLAX NOT QUITE THERE YET
+// 	resetParallax();
+// 	$('.parallax').each(function() {
+// 		var placeholder = $('<div class="placeholder">').insertAfter($(this));
+// 		placeholder.height($(this).outerHeight());
+// 		$(this).css('top',$(this).data("parallaxtop") - $(window).scrollTop());
+// 	});
+	// END
+
+
+	$(window).scroll(function() {
 		//parallax scroll for footer
-// 		var distFromBottom = $(document).height() - ($(window).scrollTop() + $(window).height());
-// 		$('.footer').css("top",($('footer').position().top-$(window).scrollTop())+"px");
-// 		$('.footer').css("backgroundPosition","50% -"+(distFromBottom/2)+"px");
+		var distFromBottom = $(document).height() - ($(window).scrollTop() + $(window).height());
+		$('.footer').css("top",($('footer').position().top-$(window).scrollTop())+"px");
+		$('.footer').css("backgroundPosition","50% -"+(distFromBottom/2)+"px");
 		
 		// and for hero:
 		$('.herocontainer').css("top","-"+($(window).scrollTop())+"px");
-		$('.heroimage').css("backgroundPosition","50% "+($(window).scrollTop()/2)+"px");
+		$('.hero-image').css("backgroundPosition","50% "+($(window).scrollTop()/2)+"px");
+		
+		// and for everything else:
+		// MORE GENERIC
+// 		var sct = $(window).scrollTop() ;
+// 		var ctr = sct + ($(window).height()/4);
+// 		$('.parallax').each(function() {
+// 			var origin = $(this).data("parallaxtop");
+// 			var delta = (origin-ctr)/4;
+// 			if ($(this).hasClass("faster")) {delta = -(delta/2)}
+// 			$(this).css("top",origin - sct + delta);
+// 		});
+		// END
 		
 	});
+}
 
-
-
+function resetParallax() {
+	$('.parallax').css("position","static");
+	$('.parallax').each(function() {
+		$(this).next('.placeholder').height($(this).outerHeight());
+		$(this).data("parallaxtop",$(this).position().top);
+	});
+	$('.parallax').css("position","fixed");
 }

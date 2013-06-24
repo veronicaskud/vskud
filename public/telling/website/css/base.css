@@ -1,23 +1,11 @@
-.clearfix:after {
-	content: ".";
+.clearfix {
+	content: "&nbsp;";
 	display: block;
 	clear: both;
-	visibility: hidden;
 	line-height: 0;
 	height: 0;
 }
  
-.clearfix {
-	display: inline-block;
-}
- 
-html[xmlns] .clearfix {
-	display: block;
-}
- 
-* html .clearfix {
-	height: 1%;
-}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -161,7 +149,10 @@ p.oomph {
 	border-bottom: 5px solid #CCC;
 	font-size: 0.8em;
 	background-color: #FFF;
-	padding-bottom: 5px;
+	position: absolute;
+	top: 0; left: 0; right: 0;
+	min-height: 60px;
+	z-index: 99;
 }
 .top-bar a {
 	color: #666;
@@ -172,35 +163,68 @@ p.oomph {
 
 .top-bar h1 {
 	width: 250px;
-	height: 50px; 
+	height: 60px; 
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 	margin: 0; padding: 0;
-	background: url('../img/logo.png') 5px 100% no-repeat;
+	background: url('../img/logo.png') 50% 50% no-repeat;
 }
-
-	@media only screen and (min-width: 900px) {
-
-	}
 
 .top-nav {
-	text-align:right
+	text-align:right;
+	display:inline;
 }
 
-.top-bar ul {
+.top-nav ul {
+	position:absolute; top: 20px; right: 0;
 	list-style:none;
 	margin: 0;
 	padding: 0;
 }
 .top-bar li {display:inline-block; white-space: nowrap;}
-.top-bar li a {padding: 5px; margin-right: 10px;}
-.menu-icon {float:right; padding: 5px; margin-right: 10px; font-size: 2em}
+.top-bar li a {padding: 5px; margin-left: 10px;}
+
+.menu-icon {
+	float:right;
+	height: 60px;
+	line-height: 60px;
+	margin-right: 10px;
+	font-size: 2em
+}
 
 
 .top-bar .buttonx, .top-bar .buttonx:hover {
 	background: #ac3236;
 	color:#fff;
+}
+
+
+@media only screen and (min-width: 321px) {
+	.top-bar {position:fixed}
+}
+
+@media only screen and (max-width: 502px) {
+	.menu-icon {display:block}
+	.top-nav {display:none; text-align:left;}
+	.top-nav ul {position:static;}
+	.top-nav li {display:block}
+	.top-nav.expanded {display:block}
+	.top-nav li a{display:block; width: 100%; line-height: 1.8em; margin-left: 0; padding-left: 46px}
+
+}
+
+@media only screen and (min-width: 503px) and (max-width: 750px) {
+	.menu-icon {display:none}
+	.top-bar {height: 88px;}
+	.top-nav ul {top: 60px;}
+	.top-nav ul {border-top: 2px solid #AC3236}
+}
+
+@media only screen and (min-width: 751px) {
+	.menu-icon {display:none}
+	.top-nav {display:block}
+	.top-nav ul {right: 20px;}
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -294,8 +318,8 @@ footer {clear:both}
 	color:#f23f45;
 }
 
-.contact {
-	margin-left: 10em;
+.footer .contact { /* switch to grid later */
+	margin-left: 25%;
 	margin-bottom: 10em;
 }
 
@@ -372,36 +396,3 @@ footer {clear:both}
 }
 
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* Top nav and hero breakpoints */
-
-	@media only screen and (max-width: 640px) {
-		.menu-icon {display:block}
-		.top-nav {text-align:left; display:none;}
-		.top-nav.expanded {display:block}
-	
-		.top-nav li {display:block;}
-		.top-nav li a{display:block; width: 100%; line-height: 1.8em;}
-		
-		.hero-content {
-			font-size: 1em
-		}
-		
-	}
-	
-	@media only screen and (min-width: 641px) {
-		.menu-icon {display:none}
-		.top-nav {margin: 5px}
-	}
-
-
-	@media only screen and (min-width: 321px) {
-		.top-bar {
-			position:fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			z-index: 99;
-	}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

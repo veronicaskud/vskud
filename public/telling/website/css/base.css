@@ -114,7 +114,14 @@ p.oomph {
 .gridrow {padding-left: 1em; padding-right: 1em;}
 
 .row.alt {
-	background-color: #E9E9E9;
+	background: #E9E9E9;
+	background:    -moz-linear-gradient(top,  #DDD 0%, #E9E9E9 30%, #E9E9E9 100%);
+	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DDD), color-stop(30%,#E9E9E9), color-stop(100%,#E9E9E9));
+	background: -webkit-linear-gradient(top,  #DDD 0%,#E9E9E9 30%,#E9E9E9 100%);
+	background:      -o-linear-gradient(top,  #DDD 0%,#E9E9E9 30%,#E9E9E9 100%);
+	background:     -ms-linear-gradient(top,  #DDD 0%,#E9E9E9 30%,#E9E9E9 100%);
+	background:         linear-gradient(to bottom,  #DDD 0%,#E9E9E9 30%,#E9E9E9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DDD', endColorstr='#E9E9E9',GradientType=0 );
 }
 
 .col {
@@ -138,15 +145,23 @@ p.oomph {
 
 .col-4 img {width: 100%}
 
+/* everything single-column on tiny screens */
 @media only screen and (max-width: 400px) {
 	.col-2 {width: 100%; margin: 0}
 }
+
+/* on small screens, col-4 goes to two-column, everything else to single */
 @media only screen and (max-width: 600px) {
 	.col-4 {width: 46%; margin: 2%}
 	.col-3 {width: 100%; margin: 0}
 	.col-2 {width: 100%; margin: 0}
 }
 
+/* on giant screens, col-2 goes to three column with some add'l asymmetry) */
+@media only screen and (min-width: 1200px) {
+	.row {padding-left: 10%;}
+	.col-2 {width: 29%; margin: 2%}
+}
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -236,6 +251,12 @@ p.oomph {
 	.menu-icon {display:none}
 	.top-nav {display:block}
 	.top-nav ul {right: 20px;}
+	.top-bar .buttonx, .top-bar .buttonx:hover {
+		   -moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		        border-radius: 3px;
+	}
+	
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -355,9 +376,13 @@ footer {clear:both}
 	border-top: 3px solid #ac3236;
 	font-style: italic;
 	font-weight:400;
-	-moz-border-radius:    5px;
-   -webkit-border-radius: 5px;
-   border-radius:         5px;
+	   -moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
+	        box-shadow: inset 3px 3px 5px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 3px 3px 5px rgba(0,0,0,0.1);
+	   -moz-box-shadow: inset 3px 3px 5px rgba(0,0,0,0.1);
+   
 }
 
 .alt .testimonial-text {
@@ -394,6 +419,28 @@ footer {clear:both}
 	font-size: 1em;
 }
 
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.teamster {
+	line-height: 1em;
+}
+
+.teamster img {
+		   -moz-border-radius: 1em;
+		-webkit-border-radius: 1em;
+		        border-radius: 1em;
+}
+
+.teamster .name {
+	font-size: 0.86em;
+	line-height: 1em;
+}
+.teamster .title {
+	color: #999999;
+	font-size: 0.7em;
+	font-style: italic;
+	margin-bottom: 2em;
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .democontact {

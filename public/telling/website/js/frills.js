@@ -8,9 +8,8 @@ $(document).ready(function() {
 	$(window).resize(resizeHandler);
 	$(window).scroll(scrollHandler);
 
-
-	
-	if (! (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+	/* works in IE7 and IE9, not in IE8.  Go figure */
+	if (! (/Android|webOS|iPhone|iPad|iPod|BlackBerry|MSIE 8.0/i.test(navigator.userAgent))) {
 		parallax();
 	}
 

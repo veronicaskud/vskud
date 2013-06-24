@@ -47,7 +47,7 @@ var scrollHandler = function() {
 
 
 function parallax() {
-	$('.herocontainer, .footer, .parallax').css("position","fixed");
+	$('.hero, .footer, .parallax').css("position","fixed");
 
 	var footertop = $(document).height();
 	$('body').css("marginBottom",$('.footer').height());
@@ -78,7 +78,7 @@ function parallax() {
 		$('.footer').css("backgroundPosition","50% -"+(distFromBottom/2)+"px");
 		
 		// and for hero:
-		$('.herocontainer').css("top","-"+($(window).scrollTop())+"px");
+		$('.hero').css("top","-"+($(window).scrollTop())+"px");
 		$('.hero-image').css("backgroundPosition","50% "+($(window).scrollTop()/2)+"px");
 		
 		// and for everything else:

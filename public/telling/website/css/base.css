@@ -180,6 +180,10 @@ p.oomph {
 	background: url('../img/logo.png') 5px 100% no-repeat;
 }
 
+	@media only screen and (min-width: 900px) {
+
+	}
+
 .top-nav {
 	text-align:right
 }
@@ -207,6 +211,7 @@ p.oomph {
 	border-bottom: 5px solid #CCC;
 	background-color: #0f0c0b;
 	position:relative;
+	left: 0; right: 0;
 }
 
 .hero-image {

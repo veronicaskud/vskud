@@ -15,6 +15,11 @@ body {
 	text-rendering: optimizelegibility;
 }
 
+@media only screen and (max-width: 321px) {
+	body {font-size: 70%;}
+}
+
+
 a {text-decoration: none; color: #AC3236}
 
 strong {
@@ -55,6 +60,9 @@ p.oomph {
 	font-size: 1.4em;
 	line-height: 2em;
 }
+
+
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 /* Flex Video (from foundation.css) */
@@ -161,14 +169,17 @@ p.oomph {
 	color: #AC3236;
 }
 
-.top-bar h1 {
+.top-bar .logo {
 	width: 250px;
 	height: 60px; 
+	background: url('../img/logo.png') 5px 50% no-repeat;
+	overflow:hidden;
+}
+
+.top-bar h1 {
 	text-indent: 100%;
 	white-space: nowrap;
-	overflow: hidden;
 	margin: 0; padding: 0;
-	background: url('../img/logo.png') 50% 50% no-repeat;
 }
 
 .top-nav {
@@ -177,13 +188,13 @@ p.oomph {
 }
 
 .top-nav ul {
-	position:absolute; top: 20px; right: 0;
+	position:absolute; top: 13px; right: 0;
 	list-style:none;
 	margin: 0;
 	padding: 0;
 }
-.top-bar li {display:inline-block; white-space: nowrap;}
-.top-bar li a {padding: 5px; margin-left: 10px;}
+.top-bar li {float:left;}
+.top-bar li a { display:block; white-space: nowrap; padding: 5px; margin-left: 10px;}
 
 .menu-icon {
 	float:right;
@@ -208,17 +219,17 @@ p.oomph {
 	.menu-icon {display:block}
 	.top-nav {display:none; text-align:left;}
 	.top-nav ul {position:static;}
-	.top-nav li {display:block}
+	.top-nav li {display:block; float:none;}
 	.top-nav.expanded {display:block}
-	.top-nav li a{display:block; width: 100%; line-height: 1.8em; margin-left: 0; padding-left: 46px}
+	.top-nav li a{display:block; line-height: 1.8em; margin-left: 0; padding-left: 46px}
 
 }
 
 @media only screen and (min-width: 503px) and (max-width: 750px) {
 	.menu-icon {display:none}
-	.top-bar {height: 88px;}
-	.top-nav ul {top: 60px;}
-	.top-nav ul {border-top: 2px solid #AC3236}
+	.top-bar {height: 97px;}
+	.top-nav ul {top: 60px;border-top: 2px solid #AC3236}
+
 }
 
 @media only screen and (min-width: 751px) {
@@ -245,6 +256,8 @@ p.oomph {
 	height: 480px;
 }
 
+
+
 .hero-content {
 	background-color: #000;
 	background-color: rgba(0,0,0,0.8);
@@ -257,6 +270,13 @@ p.oomph {
 	position: absolute;
 	bottom: 2em;
 }
+
+@media only screen and (max-width: 321px) {
+	.hero-image {height: 320px;}
+	.hero-content {padding: 5px 5px 5px 20px}
+}
+
+
 
 .hero .what {
 	background-image: url(../img/hero/cave.jpg);
@@ -287,19 +307,20 @@ p.oomph {
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-footer {clear:both}
 
 .footer {
+	clear:both;
 	border-top: 5px solid #CCC;
-	background: #0f0c0b url(../img/map.png) no-repeat center top;
-	background-position: center center;
+	background: #0f0c0b url(../img/map.jpg) no-repeat center top;
+	background-position: 50% 50%;
 	background-size: cover;
 	padding-top:30px;
 	color:#ddd;
-	left: 0; right: 0;
 	text-shadow:         1px 1px 1px rgba(0,0,0,0.9);
 	-moz-text-shadow:    1px 1px 1px rgba(0,0,0,0.9);
 	-webkit-text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+	height: 400px;
+	left: 0; right: 0;
 }
 
 .footer p {

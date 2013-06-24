@@ -46,7 +46,7 @@ var scrollHandler = function() {
 
 
 
-function parallax() {
+var parallax = function() {
 	$('.hero, .footer, .parallax').css("position","fixed");
 	$('<div class="placeholder">').insertAfter($('.hero')).height($('.hero').outerHeight());
 

@@ -307,7 +307,7 @@ p.oomph {
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-
+footer {clear:both}
 .footer {
 	clear:both;
 	border-top: 5px solid #CCC;

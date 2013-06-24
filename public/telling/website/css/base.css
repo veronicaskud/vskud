@@ -1,10 +1,12 @@
 body {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.6em;
+	text-rendering: optimizelegibility;
 }
 
 a {text-decoration: none; color: #AC3236}
 
-.highlight {
+strong {
 	font-weight:600;
 	color:#b82b2f;
 	text-transform:uppercase;
@@ -14,7 +16,7 @@ a {text-decoration: none; color: #AC3236}
 h2 {
 text-align:center;
 color: #424242;
-font-size: 30px;
+font-size: 2em;
 font-weight: 400;
 margin-top:0;
 }
@@ -22,7 +24,24 @@ margin-top:0;
 h3 {
 	text-align:center;
 	color: #ac3236;
-	font-size: 26px;
+	font-size: 1.8em;
+	font-weight: 400;
+	margin: 0;
+}
+
+h3 {
+	text-align:center;
+	color: #ac3236;
+	font-size: 1.6em;
+	font-weight: 400;
+	margin: 0;
+}
+
+h4 {
+	text-align:center;
+	color: #ac3236;
+	border-bottom: 1px solid #AC3263;
+	font-size: 1.2em;
 	font-weight: 400;
 	margin: 0;
 }
@@ -50,6 +69,9 @@ html[xmlns] .clearfix {
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+.centered {
+	text-align:center
+}
 .row {
 	clear:both;
 	padding: 2em;
@@ -101,7 +123,7 @@ html[xmlns] .clearfix {
 .top-bar a {
 	color: #666;
 }
-.top-bar a:hover, .topbar a.selected {
+.top-bar a:hover, .top-bar a.selected {
 	color: #AC3236;
 }
 
@@ -191,7 +213,6 @@ footer {clear:both}
 	color:#ddd;
 	margin-top:7px;
 	margin-bottom:7px;
-	line-height: 1.5em;
 }
 
 .footer a {
@@ -242,9 +263,10 @@ footer {clear:both}
 .testimonial-name {
 	margin-left: 1em;
 	font-size: 0.86em;
+	line-height: 1.4em;
 }
 
-.testimonial-name span {font-weight: 700; font-size: 1em;}
+.testimonial-name span {font-weight: 700; font-size: 1.2em;}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 

@@ -4,6 +4,14 @@ $(document).ready(function() {
 		$('.top-nav').toggleClass('expanded');
 	});
 	
+	/* Grid: */
+	$('.row').each(function() {
+		if ($(this).find('.col-2').length == 2) {
+			$(this).addClass('strict')
+		}
+	});
+	
+	
 	
 	$(window).resize(resizeHandler);
 	$(window).scroll(scrollHandler);

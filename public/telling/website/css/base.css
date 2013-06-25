@@ -272,10 +272,10 @@ hr {
 
 @media only screen and (max-width: 502px) {
 	.menu-icon {display:block}
-	.top-nav {display:none; text-align:left;}
-	.top-nav ul {position:static;}
+	.top-nav ul {max-height:0; transition: 1s;}
+	.top-nav.expanded ul {max-height: 200px; transition: 1s}
+	.top-nav ul {position:static; text-align:left; overflow:hidden;}
 	.top-nav li {display:block; float:none;}
-	.top-nav.expanded {display:block}
 	.top-nav li a{display:block; line-height: 1.8em; margin-left: 0; padding-left: 46px}
 
 }

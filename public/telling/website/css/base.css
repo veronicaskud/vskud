@@ -433,16 +433,14 @@ footer {clear:both}
 
 
 .triangle-down {
-	width: 0;
-	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 20px solid #e9e9e9;
-	margin-left:75px;
+	width: 42px; height: 20px; 
+	background: url('../img/speech-tail.gif') left top no-repeat;
+	display:block;
+	margin: 0 0 0.5em 3em;
 }
 
 .alt .triangle-down {
-	border-top: 20px solid #fff;
+	background-image: url('../img/speech-tail-alt.gif');
 }
 
 .testimonial-name {

@@ -14,6 +14,18 @@
 		background: url('../img/logo@2x.png') 5px 50% no-repeat;
 		background-size: 230px 46px;
 	}
+
+	.triangle-down {
+		background-image: url('../img/speech-tail@2x.gif');
+		background-size: 42px 20px;
+	}
+
+	.alt .triangle-down {
+		background-image: url('../img/speech-tail-alt@2x.gif');
+		background-size: 42px 20px;
+	}
+
+
 }
 
 /* ################################################################################################################## */

@@ -1,5 +1,9 @@
 
+
+
 $(document).ready(function() {
+
+
 	$('.toggle-topbar').click(function() {
 		$('.top-nav').toggleClass('expanded');
 	});
@@ -12,6 +16,10 @@ $(document).ready(function() {
 	});
 	
 	
+	/* videos: */
+	$('.flex-video').fancypantsvideo({});
+	
+	
 	
 	$(window).resize(resizeHandler);
 	$(window).scroll(scrollHandler);
@@ -20,6 +28,11 @@ $(document).ready(function() {
 	if (! (/Android|webOS|iPhone|iPad|iPod|BlackBerry|MSIE 8.0/i.test(navigator.userAgent))) {
 		parallax();
 	}
+
+
+
+
+
 
 }); 
 
@@ -30,6 +43,7 @@ $(document).ready(function() {
 
 
 var resizeHandler = function() {
+	$(window).trigger("scroll");
 
 }
 
@@ -41,6 +55,58 @@ var scrollHandler = function() {
 
 
 
+	$.widget('telling.fancypantsvideo', {
+	
+		options: {
+		},
+		
+		_create: function() {
+			var self = this;
+			
+			self.thumbnail = self.element.data("thumbnail") ? self.element.data("thumbnail") : "img/videothumbs/default.jpg" ;
+			self.title = self.element.data("title") ? self.element.data("title") : "[Title Of Video Goes Here -- Missing Title]" ;
+			
+			self.placeholder =$('<div class="videoplaceholder"><div class="thumbnail"><div class="playindicator"></div></div><img class="decoration"><div class="videotitle"></div><div class="clearfix"></div>').insertAfter(self.element);
+
+			var isalt = (self.element.closest('.alt').length ? "-alt" : "");
+			var isbig = (self.placeholder.find('.decoration').width() > 600 ? "@2x" : "" );
+			
+			self.placeholder.find('.decoration').attr("src", "img/camera"+isalt + isbig + ".png");
+			self.placeholder.find('.videotitle').html(self.title);
+			self.placeholder.find('.thumbnail').css("backgroundImage",'url("' + self.thumbnail+ '")');
+			self.element.hide();
+			
+			// show the real video on click:
+			self.placeholder.click(function() {
+				// THIS WILL PROBABLY NEED TO CHANGE WHEN WE SWITCH TO MPX VIDEOS
+				// force autoplay:
+				self.element.find('iframe').attr("src",self.element.find('iframe').attr("src") + "&autoplay=1");
+
+
+				// find size of video:
+				self.element.show();
+				var w = self.element.width();
+				var h = self.element.find('iframe').height();
+				var pos = self.element.position();
+				self.element.hide();
+				// animate:
+				self.placeholder.find('.decoration').hide();
+				self.placeholder.find('.videotitle').hide();
+				self.placeholder.find('.thumbnail, .playindicator').animate(
+					{width: w, height: h, top: pos.top, left: pos.left}, "slow", function() {
+						self.placeholder.hide();
+						self.element.show();
+						
+					}
+				);
+
+
+//				self.placeholder.fadeOut("slow",function() {
+//					self.element.fadeIn("slow");
+//				});
+			});
+		}
+	});
 
 
 
@@ -61,10 +127,10 @@ var parallax = function() {
 	$('body').css("marginBottom",$('.footer').height());
 	
 // Reset parallax positions:
-	$(window).scrollTop(1);	$(window).scrollTop(0);
+	$(window).trigger('scroll');
 	
 	// Need to trigger this only on a delay:
-	$(window).resize(resetParallax);
+	//$(window).resize(resetParallax);
 	
 	
 
@@ -103,12 +169,12 @@ var parallax = function() {
 		
 	});
 }
-
-function resetParallax() {
-	$('.parallax').css("position","static");
-	$('.parallax').each(function() {
-		$(this).next('.placeholder').height($(this).outerHeight());
-		$(this).data("parallaxtop",$(this).position().top);
-	});
-	$('.parallax').css("position","fixed");
-}
+// 
+// function resetParallax() {
+// 	$('.parallax').css("position","static");
+// 	$('.parallax').each(function() {
+// 		$(this).next('.placeholder').height($(this).outerHeight());
+// 		$(this).data("parallaxtop",$(this).position().top);
+// 	});
+// 	$('.parallax').css("position","fixed");
+// }

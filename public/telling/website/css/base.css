@@ -469,6 +469,9 @@ footer {clear:both}
 .footer .contact { /* switch to grid later */
 	margin-left: 25%;
 	margin-bottom: 10em;
+	max-width: 30%;
+	padding: 1em;
+	background-color: rgba(0,0,0,0.4);
 }
 
 

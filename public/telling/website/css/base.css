@@ -466,11 +466,8 @@ footer {clear:both}
 	color:#f23f45;
 }
 
-.footer .contact { /* switch to grid later */
-	margin-left: 25%;
-	margin-bottom: 10em;
-	max-width: 30%;
-	padding: 1em;
+.footer .contact { 
+	padding: 10px;
 	background-color: rgba(0,0,0,0.4);
 }
 .footer h5 {display:none} /* temporary, until there are more categories in footer */

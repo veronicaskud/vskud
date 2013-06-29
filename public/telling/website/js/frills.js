@@ -152,7 +152,7 @@ var parallax = function() {
 		
 		// and for hero:
 		$('.hero').css("top","-"+($(window).scrollTop())+"px");
-		$('.hero-image').css("backgroundPosition","50% "+($(window).scrollTop()/2)+"px");
+		$('.hero-image').css("backgroundPosition","right "+($(window).scrollTop()/2)+"px");
 		
 		// and for everything else:
 		// MORE GENERIC

@@ -116,12 +116,11 @@ hr {
 	position: relative;
 	width: 100%;
 	cursor: pointer; cursor: hand;
-	height: 400px;
 	padding-top: 0.5em;
 }
 .videoplaceholder .decoration {
 	float: right;
-	width: 80%;
+	max-width: 80%;
 	margin-top:-2em;
 	margin-right: -5%;
 	opacity: 0.7;
@@ -152,7 +151,7 @@ hr {
 }
 
 @media only screen and (max-width: 321px) {
-	.videoplaceholder {height: 300px}
+
 	.videoplaceholder .thumbnail {width: 160px; height: 90px; margin-bottom: 45px;}
 	.videoplaceholder .playindicator {width: 120px; height: 50px; margin: 20px; background-size: cover}
 	.videoplaceholder .videotitle {padding-top: 100px}
@@ -181,7 +180,7 @@ hr {
 
 .row {
 	clear:both;
-	padding: 2em 15% 1em;
+	padding: 1em 15%;
 	background-color:#FFF;
 }
 

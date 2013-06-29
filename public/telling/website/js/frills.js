@@ -72,6 +72,9 @@ var scrollHandler = function() {
 			var isbig = (self.placeholder.find('.decoration').width() > 600 ? "@2x" : "" );
 			
 			self.placeholder.find('.decoration').attr("src", "img/camera"+isalt + isbig + ".png");
+			if (self.placeholder.find('.decoration').width() > 600) {
+				self.placeholder.find('.decoration').css('marginTop','-25%');
+			}
 			self.placeholder.find('.videotitle').html(self.title);
 			self.placeholder.find('.thumbnail').css("backgroundImage",'url("' + self.thumbnail+ '")');
 			self.element.hide();
@@ -90,20 +93,16 @@ var scrollHandler = function() {
 				var pos = self.element.position();
 				self.element.hide();
 				// animate:
-				self.placeholder.find('.decoration').hide();
+				self.placeholder.find('.decoration').fadeOut();
 				self.placeholder.find('.videotitle').hide();
 				self.placeholder.find('.thumbnail, .playindicator').animate(
 					{width: w, height: h, top: pos.top, left: pos.left}, "slow", function() {
+						$(window).trigger('scroll'); // reposition footer if necessary
 						self.placeholder.hide();
 						self.element.show();
 						
 					}
 				);
-
-
-//				self.placeholder.fadeOut("slow",function() {
-//					self.element.fadeIn("slow");
-//				});
 			});
 		}
 	});

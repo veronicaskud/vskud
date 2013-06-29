@@ -473,6 +473,7 @@ footer {clear:both}
 	padding: 1em;
 	background-color: rgba(0,0,0,0.4);
 }
+.footer h5 {display:none} /* temporary, until there are more categories in footer */
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

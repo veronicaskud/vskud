@@ -550,8 +550,6 @@ footer {clear:both}
 
 .teamster h4 {text-align:left}
 
-
-
 @media only screen and (max-width: 600px) {
 	.teamster {padding-left: 0 !important}
 	.teamster img {position:static; float:left; margin-right: 2em;}
@@ -560,7 +558,12 @@ footer {clear:both}
 	
 }
 
-
+.team img {
+	width: 100%;
+		 -moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+					border-radius: 1em;
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .startedcontacts {

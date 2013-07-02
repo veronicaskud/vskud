@@ -529,27 +529,38 @@ footer {clear:both}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 .teamster {
-	line-height: 1em;
+	clear:both !important;
+	padding-left: 33%;
+	position:relative;
+	margin: 2em 0;
 }
 
 .teamster img {
 		 -moz-border-radius: 1em;
 	-webkit-border-radius: 1em;
 					border-radius: 1em;
-	width: 100%;
-
+	width: 30%; max-width: 200px;
+	position:absolute; top:0; left:0;
 }
 
-.teamster .name {
-	font-size: 0.86em;
-	line-height: 1em;
-}
-.teamster .title {
+.teamster .title, .teamster .title a {
 	color: #999999;
-	font-size: 0.7em;
 	font-style: italic;
-	margin-bottom: 2em;
 }
+
+.teamster h4 {text-align:left}
+
+
+
+@media only screen and (max-width: 600px) {
+	.teamster {padding-left: 0 !important}
+	.teamster img {position:static; float:left; margin-right: 2em;}
+	.teamster p {clear:left; padding-top: 1em;}
+	.teamster h4 {border-bottom: none}
+	
+}
+
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .startedcontacts {

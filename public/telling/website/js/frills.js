@@ -3,6 +3,9 @@
 
 $(document).ready(function() {
 
+	$('.logo').click(function() {
+		window.location.href="./"; // so there
+	});
 
 	$('.toggle-topbar').click(function() {
 		$('.top-nav').toggleClass('expanded');
@@ -22,24 +25,14 @@ $(document).ready(function() {
 	
 	
 	$(window).resize(resizeHandler);
-	$(window).scroll(scrollHandler);
+//	$(window).scroll(scrollHandler);
 
 	/* works in IE7 and IE9, not in IE8.  Go figure */
 	if (! (/Android|webOS|iPhone|iPad|iPod|BlackBerry|MSIE 8.0/i.test(navigator.userAgent))) {
 		parallax();
 	}
 
-
-
-
-
-
 }); 
-
-
-
-
-
 
 
 var resizeHandler = function() {
@@ -47,12 +40,9 @@ var resizeHandler = function() {
 
 }
 
-var scrollHandler = function() {
+//var scrollHandler = function() {
 
-}
-
-
-
+//}
 
 
 	$.widget('telling.fancypantsvideo', {
@@ -85,7 +75,6 @@ var scrollHandler = function() {
 				// force autoplay:
 				self.element.find('iframe').attr("src",self.element.find('iframe').attr("src") + "&autoplay=1");
 
-
 				// find size of video:
 				self.element.show();
 				var w = self.element.width();
@@ -108,16 +97,6 @@ var scrollHandler = function() {
 	});
 
 
-
-
-
-
-
-
-
-
-
-
 var parallax = function() {
 	$('.hero, .footer, .parallax').css("position","fixed");
 	$('<div class="placeholder">').insertAfter($('.hero')).height($('.hero').outerHeight());
@@ -130,9 +109,6 @@ var parallax = function() {
 	
 	// Need to trigger this only on a delay:
 	//$(window).resize(resetParallax);
-	
-	
-
 
 	// GENERIC PARALLAX NOT QUITE THERE YET
 // 	resetParallax();

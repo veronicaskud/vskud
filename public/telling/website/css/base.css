@@ -291,6 +291,7 @@ hr {
 	height: 60px; 
 	background: url('../img/logo.png') 5px 50% no-repeat;
 	overflow:hidden;
+	cursor: pointer; cursor: hand;
 }
 
 .top-bar h1 {

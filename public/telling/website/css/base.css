@@ -23,6 +23,9 @@ p {
 	body {font-size: 70%;}
 }
 
+@media only screen and (max-width: 481px) {
+	.hidefromsmallscreens {display:none}
+}
 
 a {text-decoration: none; color: #AC3236}
 

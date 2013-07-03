@@ -488,7 +488,7 @@ footer {clear:both}
 	background: #e9e9e9;
 	font-size: 0.9em;
 	line-height: 1.4em;
-	padding: 0 1em 0.5em;
+	padding: 0.5em 1em;
 	border-top: 3px solid #ac3236;
 	font-style: italic;
 	font-weight:400;
@@ -604,7 +604,7 @@ footer {clear:both}
 
 .storytelling {
 	width:100%;
-	margin: 1em 0 -1em 0;
+	margin: 1em 0 0 0;
 	box-shadow:         2px 2px 3px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
 	-moz-box-shadow:    2px 2px 3px rgba(0,0,0,0.2);

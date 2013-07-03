@@ -192,12 +192,12 @@ hr {
 
 .row.alt {
 	background: #E9E9E9;
-	background:    -moz-linear-gradient(top,  #DDD 0%, #E9E9E9 30%, #E9E9E9 100%);
-	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DDD), color-stop(30%,#E9E9E9), color-stop(100%,#E9E9E9));
-	background: -webkit-linear-gradient(top,  #DDD 0%,#E9E9E9 30%,#E9E9E9 100%);
-	background:      -o-linear-gradient(top,  #DDD 0%,#E9E9E9 30%,#E9E9E9 100%);
-	background:     -ms-linear-gradient(top,  #DDD 0%,#E9E9E9 30%,#E9E9E9 100%);
-	background:         linear-gradient(to bottom,  #DDD 0%,#E9E9E9 30%,#E9E9E9 100%);
+	background:    -moz-linear-gradient(top,  #E9E9E9 0%, #E9E9E9 60%, #DDD 100%);
+	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E9E9E9), color-stop(60%,#E9E9E9), color-stop(100%,#DDD));
+	background: -webkit-linear-gradient(top,  #E9E9E9 0%,#E9E9E9 60%,#DDD 100%);
+	background:      -o-linear-gradient(top,  #E9E9E9 0%,#E9E9E9 60%,#DDD 100%);
+	background:     -ms-linear-gradient(top,  #E9E9E9 0%,#E9E9E9 60%,#DDD 100%);
+	background:         linear-gradient(to bottom,  #E9E9E9 0%,#E9E9E9 60%,#DDD 100%);
 }
 
 .col {

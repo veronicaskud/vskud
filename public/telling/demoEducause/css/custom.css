@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-question {
+  max-width: 550px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-question .form-question-heading {
+  margin-bottom: 15px;
+}
+.form-question .checkbox {
+  font-weight: normal;
+}
+.form-question .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-question .form-control:focus {
+  z-index: 2;
+}
+
+.form-question input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-question textarea {
+  margin-bottom: 20px;
+}

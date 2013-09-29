@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* FROM BOOTSTRAP */
+
+html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+ body{margin:0}
+ a:focus{outline:thin dotted}
+ a:active,a:hover{outline:0}
+ h1{margin:.67em 0;font-size:2em}
+
+/* CUSTOM */
+
+body {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-question {
+  max-width: 550px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-question .form-question-heading {
+  margin-bottom: 15px;
+}
+.form-question .checkbox {
+  font-weight: normal;
+}
+.form-question .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-question .form-control:focus {
+  z-index: 2;
+}
+
+.form-question input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-question textarea {
+  margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+	margin-bottom:20px;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+

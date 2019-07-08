@@ -1,0 +1,23 @@
+html {font-family: 'Noto Sans', sans-serif;}
+body {margin:0;background:#F4F7FB;font-size:16px;color:#353A42;line-height:1.5em;}
+figure {margin:0;padding:0;}
+h1 {font-size: 18px;font-weight:700;margin:20px 16px 20px 16px;}
+h2, h3, h4 {font-size:16px;font-weight:700;margin:20px 16px 20px 16px;}
+p {padding:0 16px 0 16px;margin: 20px 0 20px 0;}
+li {margin:20px 16px 20px 8px;}
+
+.article-heading {background:#ffffff;padding:20px;}
+.article-title {font-weight: normal;font-size: 18px;}
+.article-time {font-weight:bold;font-size: 13px;color:#757F8F;}
+.article-main {padding-bottom:20px;border-bottom:20px solid #353A42;}
+.article-image {max-height:200px;overflow: hidden;}
+.article-image img {width:100%;}
+.article-q {border-left:4px solid #7DAAED;}
+.article-q q {font-size:18px;font-style:italic;color:#353A42;}
+
+.colors {width:400px;height: 200px;color:#ffffff;font-size:16px;font-weight:bold;padding:40px;}
+.color1 {background-color:#48C0A3}
+
+
+
+
